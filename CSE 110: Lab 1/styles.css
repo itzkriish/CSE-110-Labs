@@ -41,6 +41,11 @@
     scroll-margin-top: 110px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -71,4 +76,22 @@
 #S3 {
     background-color: rgb(245,240,230);
     font-size: 28px;
+}
+
+@media (max-width: 800px) {
+    .navbar ul {
+        display: none;
+    }
+    .logo {
+        max-width: 75%;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
