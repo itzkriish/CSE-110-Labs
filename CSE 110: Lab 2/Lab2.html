@@ -55,6 +55,29 @@
    </div>
 
    <script>
+        document.getElementById("title").addEventListener("input", function() {
+            const maxLength = 50;
+            const titleInp = this.value;
+
+            if (titleInp.length > maxLength) {
+                alert("Title cannot exceed 50 characters.");
+                this.value = titleInp.substring(0, maxLength);
+            }
+        });
+
+        document.getElementById("title").addEventListener("focus", function () {
+           this.style.backgroundColor = "#e0f7fa";  // Light blue background on focus
+        });
+        document.getElementById("title").addEventListener("blur", function () {
+           this.style.backgroundColor = "";  // Reset background on blur
+        });
+        document.getElementById("content").addEventListener("focus", function () {
+           this.style.backgroundColor = "#e0f7fa";  // Light blue background on focus
+        });
+        document.getElementById("content").addEventListener("blur", function () {
+           this.style.backgroundColor = "";  // Reset background on blur
+        });
+
         document.getElementById("userForm").addEventListener("submit", function (event) {
             event.preventDefault();
             // Get the input values
