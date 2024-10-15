@@ -9,34 +9,58 @@ body {
  
  @media (min-width: 600px) {
   .app-container {
-    display: grid;
-    grid-template-columns: 200px 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
  }
- 
+
  .notes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(250px, auto);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
- }
- 
- .note-item {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+}
+
+.note-item {
   border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
- }
- 
- .notes-header {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.notes-header {
   display: flex;
-  justify-content: flex-end;
- }
+  justify-content: space-between;
+}
+
+.note-form {
+  margin-bottom: 20px;
+}
+
+.note-form input,
+.note-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.note-form button {
+  padding: 10px;
+  background-color: #4193e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.note-form button:hover {
+  background-color: #3581c9;
+}
  
  .notes-header button {
   font-size: 16px;
@@ -50,32 +74,12 @@ body {
   margin: 0;
  }
  
- .note-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
- }
- 
  textarea,
  input {
   border-radius: 5px;
   border: 1px solid black;
   padding: 10px;
   font-size: 16px;
- }
- 
- .note-form button {
-  border-radius: 5px;
-  background-color: rgb(64, 154, 184);
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  color: white;
- }
- 
- .note-form button:hover {
-  background-color: rgb(106, 175, 198);
-  cursor: pointer;
  }
  
  .edit-buttons {
@@ -92,5 +96,3 @@ body {
   background-color: rgb(220, 89, 89);
   color: white;
  }
- 
- 
